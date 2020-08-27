@@ -1,4 +1,5 @@
 <h2>Authors</h2>
 <ul class="alert alert-primary">
-  <li *ngFor="let author of listOfAuthors" [class.text-danger]="author=='Mosh'">{{author}}</li>
+  <li *ngFor="let author of listOfAuthors" [class.text-danger]="author=='Mosh'"
+    [style.backgroundColor]="author=='Josh' ? 'red' : 'yellow'">{{author}}</li>
 </ul>

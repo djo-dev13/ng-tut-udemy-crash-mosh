@@ -1,4 +1,4 @@
 <h2>Authors</h2>
 <ul class="alert alert-primary">
-  <li *ngFor="let author of listOfAuthors">{{author}}</li>
+  <li *ngFor="let author of listOfAuthors" [class.text-danger]="author=='Mosh'">{{author}}</li>
 </ul>

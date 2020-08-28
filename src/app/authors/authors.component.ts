@@ -10,7 +10,9 @@ export class AuthorsComponent implements OnInit {
 
   private listOfAuthors: string[];
 
-  private emailAddress = "test.email@default.com"
+  private emailAddress = "test.email@default.com";
+
+  private authorDescription = "this is a very long description that need to be trimmed in order to display the custome pipe functionality in angular framework";
 
   constructor(authors: AuthorsService) {
     this.listOfAuthors = authors.getAuthors();

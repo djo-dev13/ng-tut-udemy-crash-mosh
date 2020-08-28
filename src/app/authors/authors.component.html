@@ -7,3 +7,5 @@
 <div class="alert alert-success" (click)="alertClicked()">
   <button class="btn btn-primary" (click)="onClick($event)">Save</button>
 </div>
+
+<input type="text" #email (keyup.enter)="onEnter(email.value)">

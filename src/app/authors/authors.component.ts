@@ -23,6 +23,10 @@ export class AuthorsComponent implements OnInit {
     console.log("Alert Clicked!");
   }
 
+  onEnter(email) {
+    console.log(email);
+  }
+
   ngOnInit() {
   }
 

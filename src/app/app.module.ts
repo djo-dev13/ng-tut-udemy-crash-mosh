@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { AuthorsComponent } from './authors/authors.component';
 
 import { AuthorsService } from './authors.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { AuthorsService } from './authors.service';
     AuthorsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [
     AuthorsService

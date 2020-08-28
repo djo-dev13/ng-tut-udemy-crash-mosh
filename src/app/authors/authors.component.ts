@@ -7,9 +7,11 @@ import { AuthorsService } from '../authors.service';
   styleUrls: ['./authors.component.scss']
 })
 export class AuthorsComponent implements OnInit {
-  
+
   private listOfAuthors: string[];
-  
+
+  private emailAddress = "test.email@default.com"
+
   constructor(authors: AuthorsService) {
     this.listOfAuthors = authors.getAuthors();
   }
@@ -25,6 +27,10 @@ export class AuthorsComponent implements OnInit {
 
   onEnter(email) {
     console.log(email);
+  }
+
+  onEnterTwo() {
+    console.log(this.emailAddress);
   }
 
   ngOnInit() {

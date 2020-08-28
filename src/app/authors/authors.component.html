@@ -1,11 +1,15 @@
-<h2>Authors</h2>
-<ul class="alert alert-primary">
-  <li *ngFor="let author of listOfAuthors" [class.text-danger]="author=='Mosh'"
-    [style.backgroundColor]="author=='Josh' ? 'red' : 'yellow'">{{author}}</li>
-</ul>
+<div class="container">
+  <h2>Authors</h2>
+  <ul class="alert alert-primary">
+    <li *ngFor="let author of listOfAuthors" [class.text-danger]="author=='Mosh'"
+      [style.backgroundColor]="author=='Josh' ? 'red' : 'yellow'">{{author}}</li>
+  </ul>
 
-<div class="alert alert-success" (click)="alertClicked()">
-  <button class="btn btn-primary" (click)="onClick($event)">Save</button>
+  <div class="alert alert-success" (click)="alertClicked()">
+    <button class="btn btn-primary" (click)="onClick($event)">Save</button>
+  </div>
+
+  Email <input class="form-control" type="text" #email (keyup.enter)="onEnter(email.value)">
+
+  Email Two Way: <input class="form-control" type="text"[(ngModel)]="emailAddress" (keyup.enter)="onEnterTwo()">
 </div>
-
-<input type="text" #email (keyup.enter)="onEnter(email.value)">

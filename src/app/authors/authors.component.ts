@@ -14,6 +14,15 @@ export class AuthorsComponent implements OnInit {
     this.listOfAuthors = authors.getAuthors();
   }
 
+  onClick($event) {
+    console.log("Btn clicked!");
+    $event.stopPropagation();
+  }
+
+  alertClicked() {
+    console.log("Alert Clicked!");
+  }
+
   ngOnInit() {
   }
 

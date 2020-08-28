@@ -3,3 +3,7 @@
   <li *ngFor="let author of listOfAuthors" [class.text-danger]="author=='Mosh'"
     [style.backgroundColor]="author=='Josh' ? 'red' : 'yellow'">{{author}}</li>
 </ul>
+
+<div class="alert alert-success" (click)="alertClicked()">
+  <button class="btn btn-primary" (click)="onClick($event)">Save</button>
+</div>

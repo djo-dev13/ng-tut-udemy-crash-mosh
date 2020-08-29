@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { changeEventArgs } from './favorite/favorite.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mosh-tut';
+
+  favChanged(event: changeEventArgs) {
+    console.log(`Fav Changed to: ${event.newVal}`);
+  }
 }

@@ -3,7 +3,12 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-favorite',
   templateUrl: './favorite.component.html',
-  styleUrls: ['./favorite.component.scss']
+  styleUrls: ['./favorite.component.scss'],
+  styles: [`
+  .fa-star {
+    color: red;
+  }
+  `]
 })
 export class FavoriteComponent implements OnInit {
 

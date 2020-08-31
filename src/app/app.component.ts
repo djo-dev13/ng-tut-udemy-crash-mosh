@@ -9,6 +9,8 @@ import { changeEventArgs } from './favorite/favorite.component';
 export class AppComponent {
   title = 'mosh-tut';
 
+  courses = [1,2];
+
   favChanged(event: changeEventArgs) {
     console.log(`Fav Changed to: ${event.newVal}`);
   }

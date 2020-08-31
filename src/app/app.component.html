@@ -14,15 +14,19 @@
     <ng-container class="heading">Panel Heading</ng-container>
     <ng-container class="body">
       <h4>Panel Body</h4>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, repellendus tenetur suscipit vitae vel deserunt expedita mollitia dolores. Architecto voluptates provident laboriosam ad atque? Quaerat tempora incidunt libero cumque officiis.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, repellendus tenetur suscipit vitae vel deserunt
+        expedita mollitia dolores. Architecto voluptates provident laboriosam ad atque? Quaerat tempora incidunt libero
+        cumque officiis.</p>
     </ng-container>
   </bs-panel>
-  
-  <hr>
-  <div *ngIf="courses.length > 0; else noCourse" class="alert alert-success">Courses List</div>
-  <ng-template #noCourse>
-    <div class="alert alert-danger">No Courses Yet</div>
-  </ng-template>
-  
-</div>
 
+  <hr>
+  <div *ngIf="courses.length > 0; then courseList else noCourse" class="alert alert-success"></div>
+  <ng-template #courseList>
+    Courses List
+  </ng-template>
+  <ng-template #noCourse>
+    No Courses Yet
+  </ng-template>
+
+</div>

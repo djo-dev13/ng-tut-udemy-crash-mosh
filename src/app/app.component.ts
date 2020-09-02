@@ -11,6 +11,8 @@ export class AppComponent {
 
   courses = [1,2];
 
+  viewMode = "invalid";
+
   favChanged(event: changeEventArgs) {
     console.log(`Fav Changed to: ${event.newVal}`);
   }

@@ -29,4 +29,20 @@
     No Courses Yet
   </ng-template>
 
+  <hr>
+
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="viewMode == 'map'" (click)="viewMode='map'">Map View</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [class.active]="viewMode == 'list'" (click)="viewMode='list'">List View</a>
+    </li>
+  </ul>
+  <div class="alert alert-primary" [ngSwitch]="viewMode">
+    <div class="text-success" *ngSwitchCase="'map'">Map View Content</div>
+    <div class="text-success" *ngSwitchCase="'list'">List View Content</div>
+    <div class="text-success" *ngSwitchDefault>Invalid Selection</div>
+  </div>
+
 </div>

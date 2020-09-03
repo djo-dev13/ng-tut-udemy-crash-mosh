@@ -20,4 +20,17 @@ export class AppComponent {
   favChanged(event: changeEventArgs) {
     console.log(`Fav Changed to: ${event.newVal}`);
   }
+
+  addCourse() {
+    let lastId = this.courses[this.courses.length - 1].id;
+    this.courses.push({id: lastId + 1, name: `Course ${lastId + 1}`});
+  }
+
+  editCourse(i:number) {
+    this.courses[i].name += ' updated ';
+  }
+
+  deleteCourse(i:number) {
+    this.courses.splice(i, 1);
+  }
 }

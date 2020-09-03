@@ -45,4 +45,12 @@
     <div class="text-success" *ngSwitchDefault>Invalid Selection</div>
   </div>
 
+  <hr>
+
+  <ul>
+    <li *ngFor="let c of courses; index as i; even as isEven">
+      {{i}} - {{c.name}} <span *ngIf="isEven">(even)</span>
+    </li>
+  </ul>
+
 </div>

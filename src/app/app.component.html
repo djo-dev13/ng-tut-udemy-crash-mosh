@@ -49,7 +49,7 @@
 
   <ul class="list-group w-50">
     <li *ngFor="let c of courses; index as i; even as isEven; trackBy: identityFn" class="list-group-item">
-      {{i}} - {{c.name}} <span *ngIf="isEven" class="badge badge-pill badge-info">even</span>
+      {{i}} - {{c.name}} {{c.description?.published}} <span *ngIf="isEven" class="badge badge-pill badge-info">even</span>
       <button class="btn btn-sm btn-warning m-1 float-right" (click)="editCourse(i)"> Edit </button>
       <button class="btn btn-sm btn-danger m-1 float-right" (click)="deleteCourse(i)"> Delete </button>
     </li>

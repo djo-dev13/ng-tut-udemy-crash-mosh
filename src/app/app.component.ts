@@ -32,8 +32,8 @@ export class AppComponent {
 
   loadCourses() {
     this.courses = [
-      {id: 1, name: 'Course 1'},
-      {id: 2, name: 'Course 2'},
+      {id: 1, name: 'Course 1', description: { published: 2020}},
+      {id: 2, name: 'Course 2', description: { published: 2017}},
       {id: 3, name: 'Course 3'}
     ];
   }

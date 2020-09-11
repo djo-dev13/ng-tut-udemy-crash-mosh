@@ -9,7 +9,7 @@ import { changeEventArgs } from './favorite/favorite.component';
 export class AppComponent {
   title = 'mosh-tut';
 
-  courses;
+  courses: any[] = [];
 
   viewMode = "invalid";
 

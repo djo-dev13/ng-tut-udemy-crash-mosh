@@ -9,11 +9,7 @@ import { changeEventArgs } from './favorite/favorite.component';
 export class AppComponent {
   title = 'mosh-tut';
 
-  courses = [
-    {id: 1, name: 'Course 1'},
-    {id: 2, name: 'Course 2'},
-    {id: 3, name: 'Course 3'}
-  ];
+  courses;
 
   viewMode = "invalid";
 
@@ -32,5 +28,17 @@ export class AppComponent {
 
   deleteCourse(i:number) {
     this.courses.splice(i, 1);
+  }
+
+  loadCourses() {
+    this.courses = [
+      {id: 1, name: 'Course 1'},
+      {id: 2, name: 'Course 2'},
+      {id: 3, name: 'Course 3'}
+    ];
+  }
+
+  identityFn(index, course) {
+    return course ? course.id : undefined;
   }
 }

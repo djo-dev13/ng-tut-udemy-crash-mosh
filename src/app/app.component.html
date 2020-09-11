@@ -48,12 +48,13 @@
   <hr>
 
   <ul class="list-group w-50">
-    <li *ngFor="let c of courses; index as i; even as isEven" class="list-group-item">
+    <li *ngFor="let c of courses; index as i; even as isEven; trackBy: identityFn" class="list-group-item">
       {{i}} - {{c.name}} <span *ngIf="isEven" class="badge badge-pill badge-info">even</span>
       <button class="btn btn-sm btn-warning m-1 float-right" (click)="editCourse(i)"> Edit </button>
       <button class="btn btn-sm btn-danger m-1 float-right" (click)="deleteCourse(i)"> Delete </button>
     </li>
   </ul>
 
+  <button class="btn btn-secondary m-1" (click)="loadCourses()">Load Courses</button>
   <button  class="btn btn-success m-1" (click)="addCourse()"> Add </button>
 </div>
